@@ -77,4 +77,17 @@ heap_t *array_to_heap(int *array, size_t size);
 int heap_extract(heap_t **root);
 int *heap_to_sorted_array(heap_t *heap, size_t *size);
 
+/*helper functions*/
+bst_t *nonpredecessor(bst_t *root);
+bst_t *delete(bst_t *root, bst_t *node);
+bst_t *undo_r(bst_t *root, bst_t *node, int value);
+size_t checks_height(const heap_t *tree);
+size_t tree_height(const binary_tree_t *tree);
+void initializer(heap_t *tree, heap_t **node, size_t height);
+void heapify(heap_t *root);
+size_t height(const binary_tree_t *tree);
+int balance(const binary_tree_t *tree);
+avl_t *inserts_recursive(avl_t **tree, avl_t *parent, avl_t **new, int value);
+
+
 #endif /* BINARY_TREES_H */
